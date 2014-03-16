@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="xuhuihuanbao_2013" Class="SyncObjectsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=xuhuihuanbao_2013;Persist Security Info=True;User ID=xuhuihuanbao_2013" SettingsObjectName="SyncService.Properties.Settings" SettingsPropertyName="xuhuihuanbao_2013ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sync_sewage" Member="sync_sewage">
+    <Type Name="sync_sewage">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="entName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="portName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="monitorTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flow" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="factorName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="factorValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="standard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="district" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enterName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="entType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="manageType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sync_xxgk" Member="sync_xxgk">
+    <Type Name="sync_xxgk">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WF_SYSID" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="WF_CASEID" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="APPLYITEM" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="GONGSHITYPE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GONGSHIBEGINDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GONGSHIENDDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ITEMNO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SUBJECT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ADDRESS" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BUILDERUNIT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HPUNIT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HPCHECKACCEPTUNIT" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="COMPOSEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PIWENNAME" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PIWNENO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PIWENDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SHENPIJD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="APPROVTYPE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YUANYIN" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="CANYUQINGKUANG" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="ATTACH_1" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="ATTACH_2" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ATTACH_3" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ATTACH_4" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PRJPROFILE" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PRJCS" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ATTACH_5" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="APPROVEUNIT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PRJCN" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OPETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sync_wair" Member="sync_wair">
+    <Type Name="sync_wair">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="entName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="portName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="monitorTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flow" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="factorName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="factorValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="standard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="district" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enterName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="entType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="manageType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sync_wwater" Member="sync_wwater">
+    <Type Name="sync_wwater">
+      <Column Name="uid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="entName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="portName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="monitorTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="flow" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="factorName" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="factorValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="standard" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="district" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="enterName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="entType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="manageType" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
