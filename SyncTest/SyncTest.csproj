@@ -50,6 +50,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FTPService\SyncService.csproj">
+      <Project>{03DED14C-B8E2-446E-B873-5AE096459F18}</Project>
+      <Name>SyncService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FTPSyncer\FTPSyncer.csproj">
       <Project>{5B122EBF-5F92-477F-ACA2-E1EF81DC51A2}</Project>
       <Name>FTPSyncer</Name>

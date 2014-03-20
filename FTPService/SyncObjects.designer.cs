@@ -139,6 +139,8 @@ namespace SyncService
 		
 		private string _manageType;
 		
+		private System.DateTime _syncDate;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -169,6 +171,8 @@ namespace SyncService
     partial void OnentTypeChanged();
     partial void OnmanageTypeChanging(string value);
     partial void OnmanageTypeChanged();
+    partial void OnsyncDateChanging(System.DateTime value);
+    partial void OnsyncDateChanged();
     #endregion
 		
 		public sync_sewage()
@@ -436,6 +440,26 @@ namespace SyncService
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_syncDate", DbType="DateTime NOT NULL")]
+		public System.DateTime syncDate
+		{
+			get
+			{
+				return this._syncDate;
+			}
+			set
+			{
+				if ((this._syncDate != value))
+				{
+					this.OnsyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._syncDate = value;
+					this.SendPropertyChanged("syncDate");
+					this.OnsyncDateChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -525,6 +549,10 @@ namespace SyncService
 		
 		private System.Nullable<System.DateTime> _OPETIME;
 		
+		private bool _ISDOWNLOAD;
+		
+		private System.DateTime _syncDate;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -591,6 +619,10 @@ namespace SyncService
     partial void OnPRJCNChanged();
     partial void OnOPETIMEChanging(System.Nullable<System.DateTime> value);
     partial void OnOPETIMEChanged();
+    partial void OnISDOWNLOADChanging(bool value);
+    partial void OnISDOWNLOADChanged();
+    partial void OnsyncDateChanging(System.DateTime value);
+    partial void OnsyncDateChanged();
     #endregion
 		
 		public sync_xxgk()
@@ -1218,6 +1250,46 @@ namespace SyncService
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ISDOWNLOAD", DbType="Bit NOT NULL")]
+		public bool ISDOWNLOAD
+		{
+			get
+			{
+				return this._ISDOWNLOAD;
+			}
+			set
+			{
+				if ((this._ISDOWNLOAD != value))
+				{
+					this.OnISDOWNLOADChanging(value);
+					this.SendPropertyChanging();
+					this._ISDOWNLOAD = value;
+					this.SendPropertyChanged("ISDOWNLOAD");
+					this.OnISDOWNLOADChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_syncDate", DbType="DateTime NOT NULL")]
+		public System.DateTime syncDate
+		{
+			get
+			{
+				return this._syncDate;
+			}
+			set
+			{
+				if ((this._syncDate != value))
+				{
+					this.OnsyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._syncDate = value;
+					this.SendPropertyChanged("syncDate");
+					this.OnsyncDateChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1271,6 +1343,8 @@ namespace SyncService
 		
 		private string _manageType;
 		
+		private System.DateTime _syncDate;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1301,6 +1375,8 @@ namespace SyncService
     partial void OnentTypeChanged();
     partial void OnmanageTypeChanging(string value);
     partial void OnmanageTypeChanged();
+    partial void OnsyncDateChanging(System.DateTime value);
+    partial void OnsyncDateChanged();
     #endregion
 		
 		public sync_wair()
@@ -1568,6 +1644,26 @@ namespace SyncService
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_syncDate", DbType="DateTime NOT NULL")]
+		public System.DateTime syncDate
+		{
+			get
+			{
+				return this._syncDate;
+			}
+			set
+			{
+				if ((this._syncDate != value))
+				{
+					this.OnsyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._syncDate = value;
+					this.SendPropertyChanged("syncDate");
+					this.OnsyncDateChanged();
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1621,6 +1717,8 @@ namespace SyncService
 		
 		private string _manageType;
 		
+		private System.DateTime _syncDate;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1651,6 +1749,8 @@ namespace SyncService
     partial void OnentTypeChanged();
     partial void OnmanageTypeChanging(string value);
     partial void OnmanageTypeChanged();
+    partial void OnsyncDateChanging(System.DateTime value);
+    partial void OnsyncDateChanged();
     #endregion
 		
 		public sync_wwater()
@@ -1914,6 +2014,26 @@ namespace SyncService
 					this._manageType = value;
 					this.SendPropertyChanged("manageType");
 					this.OnmanageTypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_syncDate", DbType="DateTime NOT NULL")]
+		public System.DateTime syncDate
+		{
+			get
+			{
+				return this._syncDate;
+			}
+			set
+			{
+				if ((this._syncDate != value))
+				{
+					this.OnsyncDateChanging(value);
+					this.SendPropertyChanging();
+					this._syncDate = value;
+					this.SendPropertyChanged("syncDate");
+					this.OnsyncDateChanged();
 				}
 			}
 		}

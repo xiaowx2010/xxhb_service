@@ -9,20 +9,27 @@ namespace FTPSyncer
 {
     public class FTPClient
     {
+        private readonly string IP;
+        private readonly string UserID;
+        private readonly string Password;
+        public FTPClient(string ip, string userID, string pwd)
+        {
+            IP = ip;
+            UserID = userID;
+            Password = pwd;
+        }
+
         public void Download(string filePath, string fileName)
         {
-            FTPSettings.IP = "10.101.59.182:21";
-            FTPSettings.UserID = "xh";
-            FTPSettings.Password = "xh1314!";
             FtpWebRequest reqFTP = null;
             Stream ftpStream = null;
             try
             {
                 FileStream outputStream = new FileStream(filePath + "\\" + fileName, FileMode.Create);
-                reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://" + FTPSettings.IP + "/" + fileName));
+                reqFTP = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://" + IP + "/" + fileName));
                 reqFTP.Method = WebRequestMethods.Ftp.DownloadFile;
                 reqFTP.UseBinary = true;
-                reqFTP.Credentials = new NetworkCredential(FTPSettings.UserID, FTPSettings.Password);
+                reqFTP.Credentials = new NetworkCredential(UserID, Password);
                 FtpWebResponse response = (FtpWebResponse)reqFTP.GetResponse();
                 ftpStream = response.GetResponseStream();
                 long cl = response.ContentLength;
@@ -50,12 +57,6 @@ namespace FTPSyncer
                 }
                 throw new Exception(ex.Message.ToString());
             }
-        }
-        public static class FTPSettings
-        {
-            public static string IP { get; set; }
-            public static string UserID { get; set; }
-            public static string Password { get; set; }
         }
     }
 }

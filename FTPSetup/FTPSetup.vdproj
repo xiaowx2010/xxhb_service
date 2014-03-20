@@ -15,6 +15,18 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_69A147AB51C5A7D9D6834A281C5AEC22"
+        "OwnerKey" = "8:_FA5F9A87314B41F6BBDB267E3DAD36D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C816BD146C8E8067D83ECCFFCC463B2E"
+        "OwnerKey" = "8:_FA5F9A87314B41F6BBDB267E3DAD36D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FA5F9A87314B41F6BBDB267E3DAD36D1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -23,6 +35,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FA5F9A87314B41F6BBDB267E3DAD36D1"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_69A147AB51C5A7D9D6834A281C5AEC22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C816BD146C8E8067D83ECCFFCC463B2E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -87,6 +111,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -173,6 +210,68 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_69A147AB51C5A7D9D6834A281C5AEC22"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:OralSync, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_69A147AB51C5A7D9D6834A281C5AEC22"
+                    {
+                    "Name" = "8:OralSync.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:OralSync.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4C5983FD2605490BA063C3E844CEEBBB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C816BD146C8E8067D83ECCFFCC463B2E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FTPSyncer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C816BD146C8E8067D83ECCFFCC463B2E"
+                    {
+                    "Name" = "8:FTPSyncer.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FTPSyncer.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_4C5983FD2605490BA063C3E844CEEBBB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -230,7 +329,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FTPSetup"
         "ProductCode" = "8:{46027146-2C61-4314-A460-31D728B191CD}"
-        "PackageCode" = "8:{47275A81-B9BE-4647-A650-C06277838C6D}"
+        "PackageCode" = "8:{9A82E30F-3C91-4F30-B20C-31849716697B}"
         "UpgradeCode" = "8:{6AEC2DE1-F9C5-4463-9015-ECFA1D264D16}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -238,12 +337,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Microsoft"
+        "Manufacturer" = "8:YuHe"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:FTPSetup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Microsoft"
+        "ARPCONTACT" = "8:YuHe"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -363,7 +462,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_2E5B3D1171864D1F8B2F17861263FED7"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Finished"
+                    "DisplayName" = "8:已完成"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFinishedDlg.wid"
@@ -413,7 +512,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_B0ACB4A580BC49DDB35BE15AC8C5E2BC"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Progress"
+                    "DisplayName" = "8:进度"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminProgressDlg.wid"
@@ -457,7 +556,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_5A8F3F44FCE9493A9451DCCEC6BEFE77"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Finished"
+                    "DisplayName" = "8:已完成"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFinishedDlg.wid"
@@ -488,7 +587,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_A33DD1108D6A43588B612B2857283D0F"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Progress"
+                    "DisplayName" = "8:进度"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdProgressDlg.wid"
@@ -532,7 +631,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_79C52854B4824DFEA3F77C8A8571063D"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Installation Folder"
+                    "DisplayName" = "8:安装文件夹"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdFolderDlg.wid"
@@ -567,7 +666,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_CDA8F9E258154DBE8E463D0684B6D02C"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Confirm Installation"
+                    "DisplayName" = "8:确认安装"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdConfirmDlg.wid"
@@ -589,7 +688,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_E1EDDEA59B1F4A4AACAB7ABF2B9FC2B9"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Welcome"
+                    "DisplayName" = "8:欢迎使用"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdWelcomeDlg.wid"
@@ -646,7 +745,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_259242B591FA4AF4A0C1073606A94E4D"
                     {
                     "Sequence" = "3:300"
-                    "DisplayName" = "8:Confirm Installation"
+                    "DisplayName" = "8:确认安装"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminConfirmDlg.wid"
@@ -668,7 +767,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_CA37DEB18AAB46329902D5622B370176"
                     {
                     "Sequence" = "3:100"
-                    "DisplayName" = "8:Welcome"
+                    "DisplayName" = "8:欢迎使用"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminWelcomeDlg.wid"
@@ -716,7 +815,7 @@
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_D4C87FD23EAD4845922AA3AE7E3911C7"
                     {
                     "Sequence" = "3:200"
-                    "DisplayName" = "8:Installation Folder"
+                    "DisplayName" = "8:安装文件夹"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
                     "SourcePath" = "8:<VsdDialogDir>\\VsdAdminFolderDlg.wid"
@@ -751,7 +850,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FA5F9A87314B41F6BBDB267E3DAD36D1"
             {
-            "SourcePath" = "8:..\\FTPService\\obj\\x86\\Debug\\FTPService.exe"
+            "SourcePath" = "8:..\\FTPService\\obj\\x86\\Debug\\SyncService.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4C5983FD2605490BA063C3E844CEEBBB"
