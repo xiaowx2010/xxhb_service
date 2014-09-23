@@ -252,17 +252,19 @@ namespace SyncService
             }
             
         }
-        private void DownLoad(string filename, string path, FTPClient fc)
+        private bool DownLoad(string filename, string path, FTPClient fc)
         {
             try
             {
                 if (!string.IsNullOrWhiteSpace(filename))
                     fc.Download(path, filename);
+                return true;
             }
             catch (Exception ex)
             {
 
                 Log.WriteLog(string.Format("DownLoad Error.filename:{0},path:{1}\n{2}", filename, path, ex.Message));
+                return false;
             }
 
         }
@@ -284,12 +286,17 @@ namespace SyncService
                         FTPClient fc = new FTPClient(IP, UserID, Password);
                         not_download.ForEach(xxgk =>
                         {
-                            DownLoad(xxgk.ATTACH_1, DownLoadTo, fc);
-                            DownLoad(xxgk.ATTACH_2, DownLoadTo, fc);
-                            DownLoad(xxgk.ATTACH_3, DownLoadTo, fc);
-                            DownLoad(xxgk.ATTACH_4, DownLoadTo, fc);
-                            DownLoad(xxgk.ATTACH_5, DownLoadTo, fc);
-                            xxgk.ISDOWNLOAD = true;
+                            //DownLoad(xxgk.ATTACH_1, DownLoadTo, fc);
+                            //DownLoad(xxgk.ATTACH_2, DownLoadTo, fc);
+                            //DownLoad(xxgk.ATTACH_3, DownLoadTo, fc);
+                            //DownLoad(xxgk.ATTACH_4, DownLoadTo, fc);
+                            //DownLoad(xxgk.ATTACH_5, DownLoadTo, fc);
+                            bool download_success = (DownLoad(xxgk.ATTACH_1, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_2, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_3, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_4, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_5, DownLoadTo, fc));
+                            if (!download_success)
+                            {
+                                download_success = (DownLoad(xxgk.ATTACH_1, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_2, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_3, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_4, DownLoadTo, fc) & DownLoad(xxgk.ATTACH_5, DownLoadTo, fc));
+                            }
+                            xxgk.ISDOWNLOAD = download_success;
                         });
 
                         db.SubmitChanges();
