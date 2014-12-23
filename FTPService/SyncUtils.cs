@@ -221,18 +221,29 @@ namespace SyncService
                         var localdata = (from l in db.sync_xxgk where DateTime.Compare(l.syncDate.AddMonths(+5), DateTime.Now) > 0 select l).ToList<sync_xxgk>();
                         int i = 0;
                         c.ForEach(row =>
-                        {
-                            var xxgk = localdata.FirstOrDefault<sync_xxgk>(sync_xxgk => sync_xxgk.WF_SYSID == row.Field<string>("WF_SYSID"));
-                            if (xxgk == null)
+                        { 
+                            try
                             {
-                                sync_xxgk new_xxgk = new sync_xxgk();
-                                SetValue(new_xxgk, row);
-                                newitems.Add(new_xxgk);
+
+                                var xxgk = localdata.FirstOrDefault<sync_xxgk>(sync_xxgk => sync_xxgk.WF_SYSID == row.Field<string>("WF_SYSID"));
+                                if (xxgk == null)
+                                {
+                                    sync_xxgk new_xxgk = new sync_xxgk();
+                                    SetValue(new_xxgk, row);
+                                    newitems.Add(new_xxgk);
+                                    db.sync_xxgk.InsertOnSubmit(new_xxgk);
+                                }
+                                else if (xxgk.OPETIME != row.Field<DateTime?>("OPETIME"))
+                                {
+                                    SetValue(xxgk, row);
+                                    i++;
+                                }
+                                db.SubmitChanges();
                             }
-                            else if (xxgk.OPETIME != row.Field<DateTime?>("OPETIME"))
+                            catch (Exception ex)
                             {
-                                SetValue(xxgk, row);
-                                i++;
+                                db.Refresh(System.Data.Linq.RefreshMode.OverwriteCurrentValues);
+                                Log.WriteLog(string.Format("SyncXXGK row Error:{1}\n{0}", ex.Message, row.Field<string>("WF_SYSID")));
                             }
                         });
                         if (newitems.Count > 0)
@@ -242,7 +253,7 @@ namespace SyncService
                         }
                         if(i>0)
                             Log.WriteLog("SyncXXGK success, edit count:" + i + ".");
-                        db.SubmitChanges();
+                       
                     }
                 }
             }
